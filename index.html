@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>devjobs</title>
   <script src="assets/js/devjobs.js" defer></script>
   <link rel="stylesheet" href="assets/css/devjobs.css">
 </head>
 <body>
+  
   <div class="container">
+    <img class="header-img" src="assets/logos/triangle.svg">
+    <div class="header-div">
+      <h1>devjobs</h1>
+    </div>
     <form class="filterForm">
       <h5>deneme</h5>
       <input type="text" placeholder="Filter by title, companies, expertise…" name="filter"> 
       <input type="text" placeholder="Filter by location…" name="filteredLocation">
-      <button>Search</button>
+      <label class="contractLabel">
+        <input class="checkbox" type="checkbox" name="contractFilter">
+        Full Time Only
+      </label>
+      <button class="search-btn">Search</button>
     </form>
     <div class="jobPosting">
     </div>
