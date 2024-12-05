@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 /* 2. Remove default margin */
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,21 +18,35 @@ body {
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  font-family: "Kumbh Sans";
 }
 
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -35,83 +54,48 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
-}
-
 body {
-  /* 3. Add accessible line-height */
-  line-height: 1.5;
-  /* 4. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
+  background-color: #f4f6f8;
 }
 
-/* 5. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 24px 72px;
+  background-color: #5964e0;
+  background-image: url("./../logos/triangle-bg-img.svg"),
+    url("./../logos/triangle-bg-img.svg");
+  background-position: top 30px right 50px, left 240px bottom 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-/* 6. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
-}
-
-/* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-/* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
-/* colors
-button, highlights etc: #5964E0
-text gray: #6E8098
-background: #F4F6F8 */
-
-body {
-  height: 100vh;
-  margin: 0;
-  background-color: #F4F6F8;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-  width: clamp(75%, 90%, 75%);
-  margin: auto;
+/* 
+.mobileFilterMenu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
+} */
+
+.locationFilterInput,
+.contractLabel {
+  display: none;
 }
 
 .logo {
@@ -121,87 +105,91 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: -25px;
 }
 
-.header-div {
-  width: 90%;
-  align-self: flex-start;
-  margin: auto;
-  margin-top: 0px;
-  justify-self: center;
-  margin-top: 50px;
+.lightDark {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  justify-content: end;
+  height: 40px;
 }
 
-h1 {
-  color: white;
-  justify-self: flex-start;
-  align-self: flex-start;
+.themeSwitch {
+  appearance: none;
+  background-color: white;
+  height: 24px;
+  width: 48px;
+  display: inline-flex;
+  margin: 0;
+  border-radius: 999px;
+  box-sizing: border-box;
+  padding: 5px;
+  color: #848ead;
 }
 
-h2 {
-  margin-top:0;
-  margin-bottom: 0;
+.themeSwitch:after {
+  content: "";
+  background-color: #5964e0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.themeSwitch:checked {
+  justify-content: end;
 }
 
 .post {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border-radius: 6px;
+  position: relative;
 }
-
-.gray-text {
-  color:#6E8098;
-}
-
 
 .jobPosting {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: 90%;
+  position: absolute;
+  top: 233px;
+  margin-inline: 24px;
+  gap: 49px;
+  /* grid-template-columns: repeat(3, 1fr); desktop */
+  /* gap: 40px;  desktop*/
+}
+
+.titleFilterInput {
+  border: none;
+  min-width: 150px;
 }
 
 .filterForm {
-  width: 90%;
-  height: 50px;
-  margin-bottom: 60px;
-  display: grid;
-  border-radius: 5px;
-  grid-template-columns: 3fr 2fr 1fr 1fr;
+  display: flex;
+  /* width: 100%; */
+  position: absolute;
+  top: 96px;
   background-color: white;
-  box-sizing: border-box;
-  padding: 15px;
+  border-radius: 6px;
+  margin-inline: 24px;
+  padding-inline: 24px;
 }
 
-label {
-  margin: auto;
-  font-weight: bold;
-}
-
-.header-img {
-  position:absolute;
-  top: 0px;
-  z-index: -1;
+.openFilterBtn,
+.search-btn {
+  margin-block: 16px;
+  padding: 14px;
 }
 
 .search-btn {
-  background-color: #5964E0;
+  border: none;
+  background-color: #5964e0;
   border-radius: 5px;
-  border-style: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
 }
 
-.location{
-  justify-self: flex-end;
-  margin-top: auto;
-  font-weight: bold;
-  color: #5964E0;
-}
-
-.company {
-  margin-bottom: 40px;
+.openFilterBtn {
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
 }

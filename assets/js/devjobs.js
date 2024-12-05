@@ -1,5 +1,22 @@
 const jobPosting = document.querySelector('.jobPosting');
 const filterForm = document.querySelector('.filterForm');
+const closeBtn = document.querySelector('.mobileFilterMenuCloseBtn');
+const openBtn = document.querySelector('.openFilterBtn');
+const mobileFilterMenu = document.querySelector('.mobileFilterMenu');
+const mobileFilterForm = mobileFilterMenu.querySelector("form");
+
+mobileFilterForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const locationValue = mobileFilterForm["filteredLocation"].value.toLowerCase();
+  const fullTimeOnly = mobileFilterForm["contractFilter"].checked;
+  render({
+    location: locationValue,
+    fullTimeOnly: fullTimeOnly,
+  });
+  mobileFilterMenu.close();
+});
+
+
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -40,4 +57,14 @@ async function render({filter = '', location = '', fullTimeOnly = false}) {
       </div>
     `).join(' ');
 }
+
+openBtn.addEventListener("click", () => {
+ mobileFilterMenu.showModal();
+})
+
+closeBtn.addEventListener("click", () => {
+ mobileFilterMenu.close();
+})
+
 render({ });
+

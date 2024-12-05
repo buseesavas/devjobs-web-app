@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>devjobs</title>
-  <script src="assets/js/devjobs.js" defer></script>
-  <link rel="stylesheet" href="assets/css/devjobs.css">
-</head>
-<body>
-  <div class="container">
-    <img class="header-img" src="assets/logos/triangle.svg">
-    <div class="header-div">
-      <h1>devjobs</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>devjobs</title>
+    <script src="assets/js/devjobs.js" defer></script>
+    <link rel="stylesheet" href="assets/css/devjobs.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <img class="header-img" src="assets/logos/triangle.svg"> -->
+      <div class="header-div">
+        <img src="assets/logos/devjobs.svg" alt="" />
+        <label class="lightDark">
+          <svg
+            class="light-mode-icon"
+            width="20"
+            height="19"
+            viewBox="0 0 20 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 3.36491C9.67033 3.36491 9.38775 3.07034 9.38775 2.72667V0.836485C9.38775 0.492816 9.67033 0.198242 10 0.198242C10.3297 0.198242 10.6122 0.492816 10.6122 0.836485V2.72667C10.6122 3.07034 10.3297 3.36491 10 3.36491ZM6.40172 5.95241C7.31472 5.10241 8.60365 4.55241 10 4.55241C11.3963 4.55241 12.6853 5.07741 13.5983 5.95241C14.5113 6.80241 15.102 8.00241 15.102 9.30241C15.102 10.6024 14.5113 11.8024 13.5983 12.6524C12.6853 13.5024 11.3963 14.0524 10 14.0524C8.60365 14.0524 7.31472 13.5274 6.40172 12.6524C5.48872 11.8024 4.89796 10.6024 4.89796 9.30241C4.89796 8.00241 5.46187 6.80241 6.40172 5.95241ZM3.0593 3.71033L4.54178 5.14803C4.83827 5.40943 5.26954 5.40943 5.51213 5.14803C5.78167 4.88663 5.78167 4.46839 5.51213 4.20699L4.02965 2.76929C3.76011 2.50789 3.32884 2.50789 3.0593 2.76929C2.78976 3.03069 2.78976 3.44893 3.0593 3.71033ZM0.658124 8.90658H2.60718C2.96156 8.90658 3.26531 9.18061 3.26531 9.50033C3.26531 9.82004 2.96156 10.0941 2.60718 10.0941H0.658124C0.303749 10.0941 0 9.82004 0 9.50033C0 9.18061 0.303749 8.90658 0.658124 8.90658ZM5.51213 13.8526C5.24259 13.5912 4.81132 13.5912 4.54178 13.8526L3.0593 15.2903C2.78976 15.5517 2.78976 15.97 3.0593 16.2314C3.32884 16.4928 3.76011 16.4928 4.02965 16.2314L5.51213 14.7937C5.78167 14.5323 5.78167 14.114 5.51213 13.8526ZM10 15.6357C10.3297 15.6357 10.6122 15.9303 10.6122 16.274V18.1642C10.6122 18.5078 10.3297 18.8024 10 18.8024C9.67033 18.8024 9.38775 18.5078 9.38775 18.1642V16.274C9.38775 15.9303 9.67033 15.6357 10 15.6357ZM16.9407 15.2903L15.4582 13.8526C15.1617 13.5912 14.7305 13.5912 14.4879 13.8526C14.2183 14.114 14.2183 14.5323 14.4879 14.7937L15.9704 16.2314C16.2399 16.4928 16.6712 16.4928 16.9407 16.2314C17.2102 15.97 17.2102 15.5517 16.9407 15.2903ZM16.7347 9.50033C16.7347 9.18061 17.0384 8.90658 17.3928 8.90658H19.3419C19.6963 8.90658 20 9.18061 20 9.50033C20 9.82004 19.6963 10.0941 19.3419 10.0941H17.3928C17.0384 10.0941 16.7347 9.82004 16.7347 9.50033ZM14.4879 5.14803C14.7574 5.40943 15.1887 5.40943 15.4582 5.14803L16.9407 3.71033C17.2102 3.44893 17.2102 3.03069 16.9407 2.76929C16.6712 2.50789 16.2399 2.50789 15.9704 2.76929L14.4879 4.20699C14.2183 4.46839 14.2183 4.88663 14.4879 5.14803Z"
+              fill="white"
+            />
+          </svg>
+          <input type="checkbox" class="themeSwitch" />
+          <svg
+            class="dark-mode-icon"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6 0C4.35789 0 2.84211 0.694737 1.76842 1.76842C0.663158 2.84211 0 4.35789 0 6C0 7.64211 0.694737 9.15789 1.76842 10.2316C2.84211 11.3368 4.35789 12 6 12C7.64211 12 9.1579 11.3053 10.2316 10.2316C11.3053 9.15789 12 7.64211 12 6C12 5.8147 11.9912 5.63101 11.9739 5.44938C11.8669 6.36895 11.4377 7.20438 10.8211 7.82105C10.1053 8.53684 9.09474 9 8 9C6.90526 9 5.89474 8.55789 5.17895 7.82105C4.46316 7.10526 4 6.09474 4 5C4 3.90526 4.44211 2.89474 5.17895 2.17895C5.89474 1.46316 6.90526 1 8 1C8.7164 1 9.39674 1.18933 9.98201 1.52669C8.92922 0.567176 7.51863 0 6 0Z"
+              fill="white"
+            />
+          </svg>
+        </label>
+      </div>
+      <form class="filterForm">
+        <input
+          class="titleFilterInput"
+          type="text"
+          placeholder="Filter by title…"
+          name="filter"
+        />
+        <input
+          class="locationFilterInput"
+          type="text"
+          placeholder="Filter by location…"
+          name="filteredLocation"
+        />
+        <label class="contractLabel">
+          <input class="checkbox" type="checkbox" name="contractFilter" />
+          Full Time Only
+        </label>
+        <button class="openFilterBtn">
+          <img src="assets/logos/mobile-filter-icon.svg" alt="Filter" />
+        </button>
+        <button class="search-btn">
+          <img src="assets/logos/search-icon.svg" alt="" />
+        </button>
+      </form>
+      <dialog class="mobileFilterMenu">
+        <form>
+          <div class="mobileLocationInputBox">
+            <img src="assets/logos/location-icon.svg" alt="" />
+            <input
+              class="locationFilterInputMobile"
+              type="text"
+              placeholder="Filter by location…"
+              name="filteredLocation"
+            />
+          </div>
+          <label class="contractLabelMobil">
+            <input class="checkbox" type="checkbox" name="contractFilter" />
+            Full Time Only
+          </label>
+          <button type="submit" class="mobileFilterMenuCloseBtn search-btn">
+            <img src="assets/logos/search-icon.svg" alt="" />
+          </button>
+        </form>
+      </dialog>
+      <div class="jobPosting"></div>
     </div>
-    <form class="filterForm">
-      <input type="text" placeholder="Filter by title, companies, expertise…" name="filter"> 
-      <input type="text" placeholder="Filter by location…" name="filteredLocation">
-      <label class="contractLabel">
-        <input class="checkbox" type="checkbox" name="contractFilter">
-        Full Time Only
-      </label>
-      <button class="search-btn">Search</button>
-    </form>
-    <div class="jobPosting">
-    </div>
-  </div>
-</body>
+  </body>
 </html>
+
