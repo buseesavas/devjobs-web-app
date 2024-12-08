@@ -59,12 +59,35 @@ async function render({filter = '', location = '', fullTimeOnly = false}) {
 }
 
 openBtn.addEventListener("click", () => {
- mobileFilterMenu.showModal();
+ if (window.innerWidth <= 768) { 
+    mobileFilterMenu.showModal();
+  }
 })
 
 closeBtn.addEventListener("click", () => {
  mobileFilterMenu.close();
 })
+
+const themeSwitch = document.querySelector(".themeSwitch");
+
+let currentTheme = localStorage.getItem("theme") || "1";
+
+document.body.setAttribute("data-theme", currentTheme);
+
+if (currentTheme === "2") {
+  themeSwitch.checked = true;
+}
+themeSwitch.addEventListener("change", function () {
+  if (currentTheme === "1") {
+    document.body.setAttribute("data-theme", "2");
+    currentTheme = "2";
+  } else {
+    document.body.setAttribute("data-theme", "1");
+    currentTheme = "1";
+  }
+  localStorage.setItem("theme", currentTheme);
+});
+
 
 render({ });
 
