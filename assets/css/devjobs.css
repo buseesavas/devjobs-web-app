@@ -148,6 +148,10 @@ body {
   color: #5964e0;
 }
 
+.companyBtn:hover {
+  background-color: rgba(89, 100, 224, 0.35);
+}
+
 .titleName {
   display: flex;
   flex-direction: column;
@@ -179,6 +183,10 @@ body {
   line-height: 19.84px;
   text-align: left;
   color: #6e8098;
+}
+
+.companyLink p  {
+  color: #6E8098;
 }
 
 .logo {
@@ -314,6 +322,10 @@ h2 {
   color: #ffffff;
 }
 
+.applyBtn:hover {
+  background-color: #939BF4;
+}
+
 .detailsBoxTitle p {
   display: flex;
   align-items: center;
@@ -386,7 +398,7 @@ h6 {
 }
 
 ol {
-  list-style-type: none; /* Listede sayılar için stil kullanma */
+  list-style-type: none;
   counter-reset: item;
   display: flex;
   flex-direction: column;
@@ -604,6 +616,10 @@ ul li::marker {
   padding: 14px;
 }
 
+.search-btn-header:hover {
+  background-color: #939BF4;
+}
+
 .search-btn-header p {
   display: none;
 }
@@ -629,6 +645,10 @@ ul li::marker {
   display: inline-block;
 }
 
+input {
+  color: #19202d;
+}
+
 input:focus {
   outline: none;
   font-size: 16px;
@@ -636,6 +656,16 @@ input:focus {
   line-height: 19.84px;
   text-align: left;
   color: #19202d;
+  background-color: white;
+}
+
+body[data-theme="2"] input:focus {
+  color: #FFFFFF;
+  background-color: #19202D;
+}
+
+body[data-theme="2"] input {
+  color: #FFFFFF;
 }
 
 body[data-theme="2"] .filterForm {
@@ -665,6 +695,55 @@ body[data-theme="2"] .post {
 
 body[data-theme="2"] h2 {
   color: #ffffff;
+}
+
+body[data-theme="2"] .detailTitle {
+  background-color: #19202D;
+}
+
+body[data-theme="2"] .titleName h4 {
+  color: white;
+}
+
+body[data-theme="2"] .detailBox {
+  background-color: #19202D;
+}
+
+body[data-theme="2"] h1 {
+  color: #FFFFFF;
+}
+
+body[data-theme="2"] .description {
+  color: #9DAEC2;
+}
+
+body[data-theme="2"] h6 {
+  color: #FFFFFF;
+}
+
+body[data-theme="2"] .companyBtn a{
+  color: #FFFFFF;
+}
+
+body[data-theme="2"] .companyBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+body[data-theme="2"] .companyBtn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+body[data-theme="2"] .requirements p, body[data-theme="2"] .tasks p {
+  color: #9DAEC2;
+}
+
+body[data-theme="2"] ul li, body[data-theme="2"] ol li {
+  color: #9DAEC2;
+}
+
+body[data-theme="2"] .search-btn-header:hover {
+  background-color: #939BF4;
 }
 
 @media (width >= 768px) {
@@ -807,6 +886,7 @@ body[data-theme="2"] h2 {
     margin-top: 0px;
     justify-content: center;
   }
+
 }
 
 @media (width >= 1110px) {
@@ -847,5 +927,7 @@ body[data-theme="2"] h2 {
     margin-inline: auto;
   }
 
-  
+  .post:hover h2 {
+    color: #6E8098;
+  }
 }
