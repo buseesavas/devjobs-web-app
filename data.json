@@ -138,7 +138,7 @@
     "requirements": {
       "content": "We are looking for talented and motivated engineers who can hit the ground running and take our products to the next level. The engineers who are building our platform across the stack are always willing to go the extra mile to deliver the highest quality software and client experiences. Ideally, you would have:",
       "items": [
-        "Bachelor's degree preferred, strong preference for Computer Science field of study", 
+        "Bachelor&apos;s degree preferred, strong preference for Computer Science field of study", 
         "Minimum of 5 years of relevant work experience", 
         "Hands-on experience with configuring and maintaining resources on AWS",
         "Experience and solid understanding to deploy and maintain container orchestration platforms such as ECS or Kubernetes",
@@ -248,7 +248,7 @@
     "role": {
       "content": "Job responsibilities will include developing scalable Java applications while providing expertise in the full software development lifecycle, from concept and design to testing.",
       "items": [
-        "Design and develop high-volume, low-latency applications that enhance Maker's core platform",
+        "Design and develop high-volume, low-latency applications that enhance Maker&apos;s core platform",
         "Create well designed, testable, efficient code",
         "Participate in all phases of the development lifecycle",
         "Investigate alternatives and technologies and present them for architectural review, in order to support continuous improvement"
@@ -480,3 +480,5 @@
     }
   }
 ]
+
+
